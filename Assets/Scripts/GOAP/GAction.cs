@@ -17,12 +17,15 @@ public abstract class GAction : MonoBehaviour
     public Dictionary<string, int> effects;
 
     public WorldStates agentBeliefs;
+    public GInventory inventory;
+    public WorldStates beliefs;
     public bool running = false;
 
     public GAction()
     {
         preconditions = new Dictionary<string, int>();
         effects = new Dictionary<string, int>();
+
     }
 
     public void Awake() {
@@ -37,6 +40,9 @@ public abstract class GAction : MonoBehaviour
                 effects.Add(w.key, w.value);
             }
         }   
+        inventory = this.GetComponent<GAgent>().inventory;
+        Debug.Log("Inventory: " + inventory);
+        beliefs = this.GetComponent<GAgent>().beliefs;
     }
     public bool IsAchievable() {
         return true;

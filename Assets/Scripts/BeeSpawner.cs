@@ -11,8 +11,15 @@ public class BeeSpawner : MonoBehaviour
     {
         for (int i = 0; i < numBees; i++)
         {
-            GameObject bee = Instantiate(beePrefab, transform.position, Quaternion.identity);
-            bee.transform.parent = transform;
+            GameObject bee = Instantiate(beePrefab, this.transform.position, Quaternion.identity);
         }
+        Invoke("SpawnBee", 5);
+    }
+
+    void SpawnBee()
+    {
+        GameObject bee = Instantiate(beePrefab, this.transform.position, Quaternion.identity);
+        bee.transform.parent = transform;
+        Invoke("SpawnBee", Random.Range(2, 10));
     }
 }

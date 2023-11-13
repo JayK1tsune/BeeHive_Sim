@@ -13,6 +13,9 @@ GameObject:
   - component: {fileID: 2299672269875564577}
   - component: {fileID: 6458731396828763621}
   - component: {fileID: 8031162418429622}
+  - component: {fileID: 2548834248463455359}
+  - component: {fileID: 6391222597904756014}
+  - component: {fileID: 737348973765804717}
   m_Layer: 0
   m_Name: HoneyBee
   m_TagString: Untagged
@@ -130,3 +133,57 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &2548834248463455359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6136352804969770611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7390ac1ea4d1a2d4da95ea0c3465b566, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisAgent: {fileID: 6391222597904756014}
+--- !u!114 &6391222597904756014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6136352804969770611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 623f5d8d1f41c70459c997855e92f750, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actions: []
+  currentAction: {fileID: 0}
+--- !u!114 &737348973765804717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6136352804969770611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52f023cd2e39f8f45adfad87e92e5dbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionName: GetHoneyBee
+  cost: 1
+  target: {fileID: 0}
+  targetTag: Flowers
+  duration: 0
+  preConditions:
+  - key: BeeWaiting
+    value: 0
+  - key: HivesAvailable
+    value: 0
+  afterEffects:
+  - key: HarvestHoney
+    value: 0
+  agent: {fileID: 0}
+  running: 0
