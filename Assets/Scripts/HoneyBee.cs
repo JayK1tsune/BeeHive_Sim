@@ -8,7 +8,7 @@ public class HoneyBee : GAgent
     new void Start()
     {
         base.Start();
-        SubGoal s1 = new SubGoal("HarvestHoney", 1, true);
+        SubGoal s1 = new SubGoal("HarvestHoney", 1, false);
         goals.Add(s1, 3);
     }
 
