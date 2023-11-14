@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DropOffNectar : GAction
+public class TakeBeeToHive : GAction
 {
     public override bool PrePerform()
     {
@@ -15,9 +15,10 @@ public class DropOffNectar : GAction
     }
     public override bool PostPerform()
     {
-        GWorld.Instance.GetWorld().ModifyState("Harvested", 1);
-        beliefs.ModifyState("isDying", 1);
+        GWorld.Instance.GetWorld().ModifyState("HoneyMade", 1);
+        GWorld.Instance.AddHives(target);
         inventory.RemoveItem(target);
+        GWorld.Instance.GetWorld().ModifyState("HivesAvailable", 1);
         return true;
     }
 

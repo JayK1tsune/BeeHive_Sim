@@ -18,9 +18,10 @@ GameObject:
   - component: {fileID: 536700003324277230}
   - component: {fileID: 8482586450218974071}
   - component: {fileID: 8993074329278052406}
+  - component: {fileID: 5705200795907657}
   m_Layer: 0
   m_Name: WorkerBee
-  m_TagString: Untagged
+  m_TagString: WorkerBee
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -105,7 +106,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -123,7 +124,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 5.1
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -226,12 +227,37 @@ MonoBehaviour:
   cost: 1
   target: {fileID: 0}
   targetTag: 
-  duration: 0
+  duration: 1
   preConditions:
   - key: AtFlowerField
     value: 0
   afterEffects:
   - key: isHarvested
+    value: 0
+  agent: {fileID: 0}
+  running: 0
+--- !u!114 &5705200795907657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3986289970904198669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4650c67db9ede0a46a9ed91576e9a442, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionName: GoDie
+  cost: 1
+  target: {fileID: 0}
+  targetTag: DeathBed
+  duration: 0
+  preConditions:
+  - key: isDying
+    value: 0
+  afterEffects:
+  - key: isDead
     value: 0
   agent: {fileID: 0}
   running: 0

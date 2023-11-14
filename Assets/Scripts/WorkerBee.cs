@@ -11,9 +11,11 @@ public class WorkerBee : GAgent
         SubGoal s1 = new SubGoal("CanHarvest", 1, true);
         goals.Add(s1, 3);
 
-        
         SubGoal s2 = new SubGoal("isHarvested", 1, true);
         goals.Add(s2, 5);
+
+        SubGoal s3 = new SubGoal("isDead", 1, true);
+        goals.Add(s3, 5);
     }
 
 }

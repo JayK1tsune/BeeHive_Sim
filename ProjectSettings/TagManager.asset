@@ -8,6 +8,8 @@ TagManager:
   - Flowers
   - Entrance
   - Hives
+  - DeathBed
+  - WorkerBee
   layers:
   - Default
   - TransparentFX

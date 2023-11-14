@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 2548834248463455359}
   - component: {fileID: 6391222597904756014}
   - component: {fileID: 737348973765804717}
+  - component: {fileID: 8788999047878423478}
   m_Layer: 0
   m_Name: HoneyBee
   m_TagString: Untagged
@@ -103,7 +104,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -121,7 +122,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -175,12 +176,37 @@ MonoBehaviour:
   actionName: GetHoneyBee
   cost: 1
   target: {fileID: 0}
-  targetTag: Flowers
+  targetTag: 
   duration: 0
   preConditions:
   - key: BeeWaiting
     value: 0
   - key: HivesAvailable
+    value: 0
+  afterEffects:
+  - key: CollectedBee
+    value: 0
+  agent: {fileID: 0}
+  running: 0
+--- !u!114 &8788999047878423478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6136352804969770611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8105db1270daa142b4207a403e2952d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionName: TakeBeeToHive
+  cost: 1
+  target: {fileID: 0}
+  targetTag: 
+  duration: 0
+  preConditions:
+  - key: CollectedBee
     value: 0
   afterEffects:
   - key: HarvestHoney
