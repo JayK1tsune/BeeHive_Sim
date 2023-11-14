@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class DestroyBee : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other)
-    {
-        Destroy(gameObject);    // Destroy the bee
+    private void OnCollisionEnter(Collision collision) {
+        if (collision.gameObject.tag == "WorkerBee") {
+            Destroy(collision.gameObject);
+        }
     }
 }
