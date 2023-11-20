@@ -44,7 +44,7 @@ public class GAgent : MonoBehaviour
         invoked = false;
     }
     // Update is called once per frame
-    void LateUpdate()
+    protected virtual void LateUpdate()
     {
         
         if (currentAction != null && currentAction.running)

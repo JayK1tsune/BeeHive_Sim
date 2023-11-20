@@ -8,12 +8,24 @@ public sealed class GWorld
     private static WorldStates world;
     private static Queue<GameObject> workerBees;
     private static Queue<GameObject> hives;
+    private static Queue<GameObject> flowers;
 
     static GWorld()
     {
         world = new WorldStates();
         workerBees = new Queue<GameObject>();
         hives = new Queue<GameObject>();
+        flowers = new Queue<GameObject>();
+
+        GameObject[] _flowers = GameObject.FindGameObjectsWithTag("Flower");
+        foreach (GameObject f in flowers)
+        {
+            flowers.Enqueue(f);
+        }
+        if (_flowers.Length > 0)
+        {
+            world.ModifyState("FlowersAvailable", _flowers.Length);
+        }
 
         GameObject[] _hives = GameObject.FindGameObjectsWithTag("Hives");
         foreach (GameObject h in _hives)

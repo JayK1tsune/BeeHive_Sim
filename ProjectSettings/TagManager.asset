@@ -11,6 +11,7 @@ TagManager:
   - DeathBed
   - WorkerBee
   - Queen
+  - Flower
   layers:
   - Default
   - TransparentFX
