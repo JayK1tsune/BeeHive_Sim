@@ -773,6 +773,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HoneyBee (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 9130794207029059019, guid: 4b6b705c228c3604bab4f36f484c6561, type: 3}
+      propertyPath: targetTag
+      value: Queen
+      objectReference: {fileID: 0}
     - target: {fileID: 9152414579980917681, guid: 4b6b705c228c3604bab4f36f484c6561, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.28
@@ -915,6 +919,10 @@ PrefabInstance:
     - target: {fileID: 6136352804969770611, guid: 4b6b705c228c3604bab4f36f484c6561, type: 3}
       propertyPath: m_Name
       value: HoneyBee (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9130794207029059019, guid: 4b6b705c228c3604bab4f36f484c6561, type: 3}
+      propertyPath: targetTag
+      value: Queen
       objectReference: {fileID: 0}
     - target: {fileID: 9152414579980917681, guid: 4b6b705c228c3604bab4f36f484c6561, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1193,6 +1201,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HoneyBee (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 9130794207029059019, guid: 4b6b705c228c3604bab4f36f484c6561, type: 3}
+      propertyPath: targetTag
+      value: Queen
+      objectReference: {fileID: 0}
     - target: {fileID: 9152414579980917681, guid: 4b6b705c228c3604bab4f36f484c6561, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.16
@@ -1248,8 +1260,8 @@ GameObject:
   m_Component:
   - component: {fileID: 542821421}
   m_Layer: 0
-  m_Name: HoneyBeeStart
-  m_TagString: Untagged
+  m_Name: Queen
+  m_TagString: Queen
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1869,10 +1881,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1012416572238226523, guid: 8658c3d5b74850147917fc2156ec506a, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2728758999454127576, guid: 8658c3d5b74850147917fc2156ec506a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.1699123
@@ -2253,17 +2261,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8031162418429622, guid: 4b6b705c228c3604bab4f36f484c6561, type: 3}
-      propertyPath: m_Speed
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 8031162418429622, guid: 4b6b705c228c3604bab4f36f484c6561, type: 3}
-      propertyPath: avoidancePriority
-      value: 40
-      objectReference: {fileID: 0}
     - target: {fileID: 6136352804969770611, guid: 4b6b705c228c3604bab4f36f484c6561, type: 3}
       propertyPath: m_Name
       value: HoneyBee
+      objectReference: {fileID: 0}
+    - target: {fileID: 9130794207029059019, guid: 4b6b705c228c3604bab4f36f484c6561, type: 3}
+      propertyPath: duration
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9130794207029059019, guid: 4b6b705c228c3604bab4f36f484c6561, type: 3}
+      propertyPath: targetTag
+      value: Queen
+      objectReference: {fileID: 0}
+    - target: {fileID: 9130794207029059019, guid: 4b6b705c228c3604bab4f36f484c6561, type: 3}
+      propertyPath: actionName
+      value: Long Live The Queen
       objectReference: {fileID: 0}
     - target: {fileID: 9152414579980917681, guid: 4b6b705c228c3604bab4f36f484c6561, type: 3}
       propertyPath: m_LocalPosition.x

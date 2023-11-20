@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WorkerDeath : GAction
+public class FeedQueen : GAction
 {
     public override bool PrePerform()
     {
@@ -10,7 +10,7 @@ public class WorkerDeath : GAction
     }
     public override bool PostPerform()
     {
-        Destroy(this.gameObject);
+        beliefs.RemoveState("QueenNeedsHoney");
         return true;
     }
 }

@@ -10,6 +10,17 @@ public class HoneyBee : GAgent
         base.Start();
         SubGoal s1 = new SubGoal("HarvestHoney", 1, false);
         goals.Add(s1, 3);
+
+        SubGoal s2 = new SubGoal("FedQueen", 1, false); 
+        goals.Add(s2, 1);
+
+        Invoke("CheckQueen", Random.Range(10, 20));
+    }   
+
+    void CheckQueen()
+    {
+        beliefs.ModifyState("QueenNeedsHoney", 1);
+        Invoke("ResetQueen", Random.Range(30, 60));
     }
 
 }

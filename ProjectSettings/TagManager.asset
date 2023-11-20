@@ -10,6 +10,7 @@ TagManager:
   - Hives
   - DeathBed
   - WorkerBee
+  - Queen
   layers:
   - Default
   - TransparentFX
