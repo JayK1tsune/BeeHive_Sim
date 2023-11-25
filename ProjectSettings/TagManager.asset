@@ -12,6 +12,7 @@ TagManager:
   - WorkerBee
   - Queen
   - Flower
+  - PatrolPoint
   layers:
   - Default
   - TransparentFX

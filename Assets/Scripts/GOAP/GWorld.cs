@@ -41,6 +41,15 @@ public sealed class GWorld
     private GWorld()
     {
     }
+    public void AddFlowers(GameObject f){
+        flowers.Enqueue(f);
+    }
+    public GameObject RemoveFlowers(){
+        if(flowers.Count == 0){
+            return null;
+        }
+        return flowers.Dequeue();
+    }
     public void AddHives(GameObject h){
         hives.Enqueue(h);
     }

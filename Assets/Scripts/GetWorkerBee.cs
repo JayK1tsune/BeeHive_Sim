@@ -15,7 +15,7 @@ public class GetWorkerBee : GAction
         if(resource != null){
             inventory.AddItem(resource);
         }
-        else {
+        else { //If we have no hives then we can release the Bee as we have no need for the worker.
             GWorld.Instance.AddWorkerBees(target);
             target = null;
             return false;
@@ -28,7 +28,7 @@ public class GetWorkerBee : GAction
     {
         GWorld.Instance.GetWorld().ModifyState("BeeWaiting", -1);
         if(target){
-            target.GetComponent<GAgent>().inventory.AddItem(resource);
+            target.GetComponent<GAgent>().inventory.AddItem(resource); // Add the hive to the worker bee's inventory
         }
         return true;
     }
