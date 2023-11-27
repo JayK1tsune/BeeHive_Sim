@@ -4,14 +4,12 @@ using UnityEngine;
 
 public class QueenBee : GAgent
 {
-    // Start is called before the first frame update
-    new void LateUpdate()
+    new void Start()
     {
-        base.LateUpdate();
-        if (GWorld.Instance.GetWorld().states.ToString().Contains("HoneyMade"))
-        {
-            this.GetComponent<Transform>().localScale = new Vector3(10f, 10f, 10f);
-        }
+        base.Start();
+        SubGoal s1 = new SubGoal("EatNecter", 1, false);
+        goals.Add(s1, 3);
 
-    }
+    }   
+
 }

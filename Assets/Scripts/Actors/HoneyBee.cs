@@ -12,15 +12,15 @@ public class HoneyBee : GAgent
         goals.Add(s1, 3);
 
         SubGoal s2 = new SubGoal("FedQueen", 1, false); 
-        goals.Add(s2, 5);
+        goals.Add(s2, 1);
 
         Invoke("CheckQueen", Random.Range(10, 20));
     }   
 
     void CheckQueen()
     {
-        beliefs.ModifyState("QueenNeedsHoney", 1);
-        Invoke("ResetQueen", Random.Range(10, 20));
+        beliefs.ModifyState("QueenNeedsHoney", 0);
+        Invoke("CheckQueen", Random.Range(10, 20));
     }
 
 }

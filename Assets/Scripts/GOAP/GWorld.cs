@@ -17,16 +17,6 @@ public sealed class GWorld
         hives = new Queue<GameObject>();
         flowers = new Queue<GameObject>();
 
-        GameObject[] _flowers = GameObject.FindGameObjectsWithTag("Flower");
-        foreach (GameObject f in flowers)
-        {
-            flowers.Enqueue(f);
-        }
-        if (_flowers.Length > 0)
-        {
-            world.ModifyState("FlowersAvailable", _flowers.Length);
-        }
-
         GameObject[] _hives = GameObject.FindGameObjectsWithTag("Hives");
         foreach (GameObject h in _hives)
         {
@@ -35,6 +25,16 @@ public sealed class GWorld
         if (_hives.Length > 0)
         {
             world.ModifyState("HivesAvailable", _hives.Length);
+        }
+
+        GameObject[] flow = GameObject.FindGameObjectsWithTag("Flower");
+        foreach (GameObject f in flow)
+        {
+            flowers.Enqueue(f);
+        }
+        if (flow.Length > 0)
+        {
+            world.ModifyState("FlowersAvailable", flow.Length);
         }
     }
 

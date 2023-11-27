@@ -202,7 +202,7 @@ MonoBehaviour:
   cost: 1
   target: {fileID: 0}
   targetTag: Flowers
-  duration: 0
+  duration: 1
   preConditions:
   - key: AtEntrance
     value: 0
