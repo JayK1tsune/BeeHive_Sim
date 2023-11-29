@@ -13,6 +13,7 @@ TagManager:
   - Queen
   - Flower
   - PatrolPoint
+  - HoneyBee
   layers:
   - Default
   - TransparentFX

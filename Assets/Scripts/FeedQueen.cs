@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FeedQueen : GAction
 {
+    public GameObject queen;
     public override bool PrePerform()
     {
         return true;
@@ -13,4 +14,6 @@ public class FeedQueen : GAction
         beliefs.RemoveState("QueenNeedsHoney");
         return true;
     }
+
+
 }

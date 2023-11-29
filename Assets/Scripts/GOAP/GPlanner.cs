@@ -61,6 +61,7 @@ public class GPlanner
         {
             if (cheapest == null)
             {
+                Debug.Log(leaf);
                 cheapest = leaf;
             }
             else
