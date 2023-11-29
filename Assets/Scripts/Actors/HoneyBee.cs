@@ -5,7 +5,7 @@ using UnityEngine;
 public class HoneyBee : GAgent
 {
     // Start is called before the first frame update
-    new void Start()
+    protected override void Start()
     {
         base.Start();
         SubGoal s1 = new SubGoal("HarvestHoney", 1, false);
