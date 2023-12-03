@@ -13,6 +13,7 @@ TagManager:
   - Queen
   - Flower
   - PatrolPoint
+  - Wasp
   layers:
   - Default
   - TransparentFX

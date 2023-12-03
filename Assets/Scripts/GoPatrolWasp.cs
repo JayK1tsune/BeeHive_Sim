@@ -15,6 +15,9 @@ public class GoPatrolWasp : GAction
     public override bool PrePerform()
     {
         target = FindPath();
+        if (target == null)
+            return false;
+
         return true;
        
     }
@@ -23,7 +26,7 @@ public class GoPatrolWasp : GAction
     {
         //create a list of all the patrol points and then randomly select one once it get to the patrol point it will select another one
         {
-            GameObject[] targets = GameObject.FindGameObjectsWithTag("PatrolPoint");
+            GameObject[] targets = GameObject.FindGameObjectsWithTag("Flower");
             return targets[UnityEngine.Random.Range(0, targets.Length)];    
         }
     }

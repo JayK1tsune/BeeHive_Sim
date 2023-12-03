@@ -17,9 +17,9 @@ public class FlowerTest : GAction
     }
     public override bool PostPerform()
     {
-        //GWorld.Instance.AddFlowers(target); // add the flower back to the world
-        //inventory.RemoveItem(target); // remove the flower from the inventory
-        //GWorld.Instance.GetWorld().ModifyState("FlowersAvailable", 1); // update the world state
+        GWorld.Instance.AddFlowers(target); // add the flower back to the world
+        inventory.RemoveItem(target); // remove the flower from the inventory
+        GWorld.Instance.GetWorld().ModifyState("FlowersAvailable", 1); // update the world state
         //Debug.Log("FlowerTest: PostPerform: target = " + target);
         return true;
     }

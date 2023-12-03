@@ -20,6 +20,7 @@ public abstract class GAction : MonoBehaviour
     public GInventory inventory;
     public WorldStates beliefs;
     public bool running = false;
+    
 
     public GAction()
     {
