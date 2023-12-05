@@ -16,7 +16,7 @@ public class TakeBeeToHive : GAction
     public override bool PostPerform()
     {
         GWorld.Instance.GetWorld().ModifyState("HoneyMade", 1);
-        GWorld.Instance.AddHives(target);
+        GWorld.Instance.GetQueue("hives").AddResource(target);//   AddHives(target);
         inventory.RemoveItem(target);
         GWorld.Instance.GetWorld().ModifyState("HivesAvailable", 1);
         return true;

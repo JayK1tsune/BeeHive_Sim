@@ -5,7 +5,7 @@ using System;
 using Random=UnityEngine.Random;
 
 
-public class BabyMaker : MonoBehaviour
+public class BabyMaker
 {
     private float mutationRate;
     private System.Random random;

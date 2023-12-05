@@ -10,7 +10,7 @@ public class WorkerDeath : GAction
     }
     public override bool PostPerform()
     {
-        Destroy(this.gameObject);
+        GameObject.Destroy(this.gameObject,1);
         return true;
     }
 }

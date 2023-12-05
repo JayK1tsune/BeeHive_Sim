@@ -6,7 +6,7 @@ public class FlowerTest : GAction
 {
     public override bool PrePerform()
     {
-        target = GWorld.Instance.RemoveFlowers(); // get the flower from the world
+        target = GWorld.Instance.GetQueue("flowers").RemoveResource();// RemoveFlowers(); // get the flower from the world
         //Debug.Log("FlowerTest: PrePerform: target = " + target);
         if (target == null)
             return false;
@@ -17,7 +17,7 @@ public class FlowerTest : GAction
     }
     public override bool PostPerform()
     {
-        GWorld.Instance.AddFlowers(target); // add the flower back to the world
+        GWorld.Instance.GetQueue("flowers").AddResource(target);// AddFlowers(target); // add the flower back to the world
         inventory.RemoveItem(target); // remove the flower from the inventory
         GWorld.Instance.GetWorld().ModifyState("FlowersAvailable", 1); // update the world state
         //Debug.Log("FlowerTest: PostPerform: target = " + target);
