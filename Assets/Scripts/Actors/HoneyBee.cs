@@ -48,10 +48,6 @@ public class HoneyBee : GAgent
         Invoke("CheckQueen", Random.Range(10, 20));
     }
 
-    void DefendQueen()
-    {
-        beliefs.ModifyState("QueenIsUnderAttack", 0);
-        Invoke("DefendQueen", 0);
-    }
+
 
 }

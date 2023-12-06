@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 8482586450218974071}
   - component: {fileID: 8993074329278052406}
   - component: {fileID: 5705200795907657}
+  - component: {fileID: 2291760731239704110}
   m_Layer: 0
   m_Name: WorkerBee
   m_TagString: WorkerBee
@@ -258,6 +259,31 @@ MonoBehaviour:
     value: 0
   afterEffects:
   - key: isDead
+    value: 0
+  agent: {fileID: 0}
+  running: 0
+--- !u!114 &2291760731239704110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3986289970904198669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e12181b16fb54940a40d9903781ac8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionName: Action
+  cost: 1
+  target: {fileID: 0}
+  targetTag: 
+  duration: 0
+  preConditions:
+  - key: HiveIsUnderAttack
+    value: 0
+  afterEffects:
+  - key: HiveIsDefended
     value: 0
   agent: {fileID: 0}
   running: 0

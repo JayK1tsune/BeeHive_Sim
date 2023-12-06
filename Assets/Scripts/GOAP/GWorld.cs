@@ -40,6 +40,7 @@ public sealed class GWorld
     private static ResourceQueue workerBees;
     private static ResourceQueue hives;
     private static ResourceQueue flowers;
+    private static ResourceQueue wasps;
     private static Dictionary<string, ResourceQueue> resources = new Dictionary<string, ResourceQueue>(); // dictionary of all the resources
 
     static GWorld()
@@ -51,12 +52,14 @@ public sealed class GWorld
         resources.Add("hives",hives);
         flowers = new ResourceQueue("Flower","FlowersAvailable",world);
         resources.Add("flowers",flowers);
+        wasps = new ResourceQueue("Wasp","Wasps",world);
+        resources.Add("wasps",wasps);
     }
     public ResourceQueue GetQueue(string tag){
         return resources[tag];
     }
 
-    private GWorld()
+    private GWorld() // private constructor so that no other class can create an instance of this class
     {
     }
   
