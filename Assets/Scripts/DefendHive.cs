@@ -28,27 +28,7 @@ public class DefendHive : GAction
         wasp = target;
         Destroy(target,delay);
     }
-    bool isWaspNearby = false;
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Wasp"))
-        {
-            isWaspNearby = true;
-            beliefs.ModifyState("HiveIsUnderAttack", 1);
-            Defendbees();
-            DestroyWasp(target,10f);
-            Debug.Log("Wasp entered the area!");
-        }
-    }
-    private void OnTriggerExit(Collider other)
-    {
-        if(other.tag == "Wasp")
-        {
-            isWaspNearby = false;
-             Debug.Log("Wasp is dead");   
-        }
-    }
     void Defendbees()
     {
         beliefs.ModifyState("HiveIsUnderAttack", 0);

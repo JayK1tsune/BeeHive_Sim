@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class HoneyBee : GAgent
 {
-    BabyMaker babyMaker = new BabyMaker(0.1f); // 10% mutation rate
-    BeeManger beeManager = new BeeManger();
+
     public GameObject beePrefab;
     new void Start()
     {
@@ -22,25 +21,7 @@ public class HoneyBee : GAgent
         Invoke("CheckQueen", Random.Range(10, 20));
     }   
 
-    bool isWaspNearby = false;
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Wasp"))
-        {
-            isWaspNearby = true;
-            Debug.Log("Wasp entered the area!");
-        }
-    }
-    private void OnTriggerExit(Collider other)
-    {
-        if(other.tag == "Wasp")
-        {
-            beeManager.SpawnBabyBee(beePrefab);
-            isWaspNearby = false;
-             Debug.Log("Wasp is not nearby");   
-        }
-    }
 
     void CheckQueen()
     {
