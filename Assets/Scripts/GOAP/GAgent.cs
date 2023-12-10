@@ -54,7 +54,7 @@ public class GAgent : MonoBehaviour
             //Debug.Log(currentAction.agent.hasPath + "   " + distanceToTarget );
             if (currentAction.agent.hasPath && distanceToTarget < 2f)// currentAction.agent.remainingDistance < 1f)
             {
-                Debug.Log("Distance to Goal: " + currentAction.agent.remainingDistance);
+                //Debug.Log("Distance to Goal: " + currentAction.agent.remainingDistance);
                 if (!invoked)
                 {
                     Invoke("CompleteAction", currentAction.duration);

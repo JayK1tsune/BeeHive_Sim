@@ -8,10 +8,12 @@ public class FieldOfView : GAgent
     [Range(0, 360)]
     public float viewAngle;
     public GameObject[] wasp;
+    public GameObject[] bee;
     public GameObject currentWasp;
     public LayerMask targetMask;
     public LayerMask obstacleMask;
     public bool canSeeBee;
+    public bool canSeeWasp;
 
     // Start is called before the first frame update
     protected override void Start()
@@ -44,16 +46,19 @@ public class FieldOfView : GAgent
                 if (!Physics.Raycast(transform.position, dirToTarget, distToTarget, obstacleMask))
                 {
                     canSeeBee = true;
+                    canSeeWasp = true;
                     Debug.Log("Wasp can see bee");
                 }
                 else
                 {
+                    canSeeWasp = false;
                     canSeeBee = false;
                     Debug.Log("Wasp can't see bee");
                 }
             }
             else 
             {
+                canSeeWasp = false;
                 canSeeBee = false;
                 Debug.Log("Wasp can't see bee");
             }
@@ -61,8 +66,10 @@ public class FieldOfView : GAgent
     }  
     void Update()
     {
-        wasp = GameObject.FindGameObjectsWithTag("WorkerBee");
+        wasp = GameObject.FindGameObjectsWithTag("DefenceBee");
+        bee = GameObject.FindGameObjectsWithTag("Wasp");
         FindColesetWasp();
+        FindClosestBee();
            
     }
     void FindColesetWasp()
@@ -79,5 +86,20 @@ public class FieldOfView : GAgent
             }
         }
         currentWasp = closestWasp;
+    }
+    void FindClosestBee()
+    {
+        float closestDistance = Mathf.Infinity;
+        GameObject closestBee = null;
+        foreach (GameObject currentBee in bee)
+        {
+            float distance = Vector3.Distance(transform.position, currentBee.transform.position);
+            if (distance < closestDistance)
+            {
+                closestDistance = distance;
+                closestBee = currentBee;
+            }
+        }
+        currentWasp = closestBee;
     }
 }

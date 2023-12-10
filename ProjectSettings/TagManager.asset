@@ -15,6 +15,7 @@ TagManager:
   - PatrolPoint
   - Wasp
   - HoneyBee
+  - DefenceBee
   layers:
   - Default
   - TransparentFX

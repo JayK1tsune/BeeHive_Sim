@@ -26,11 +26,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0342f0bea10a14b43bb269d347417f54, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.10000229
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0342f0bea10a14b43bb269d347417f54, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -30.64
+      value: -31
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0342f0bea10a14b43bb269d347417f54, type: 3}
       propertyPath: m_LocalRotation.w
@@ -66,10 +66,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0342f0bea10a14b43bb269d347417f54, type: 3}
       propertyPath: m_Name
-      value: Flower
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 0342f0bea10a14b43bb269d347417f54, type: 3}
-      propertyPath: m_TagString
       value: Flower
       objectReference: {fileID: 0}
     m_RemovedComponents: []
