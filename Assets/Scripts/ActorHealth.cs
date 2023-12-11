@@ -1,6 +1,6 @@
 using UnityEngine;
 //simple health script for wasps that can be used for other enemies as well if needed
-public class WaspHealth : MonoBehaviour
+public class ActorHealth : MonoBehaviour
 {
     [SerializeField]
     private int _healthpoints;

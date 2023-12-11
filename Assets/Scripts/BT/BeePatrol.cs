@@ -2,12 +2,12 @@ using UnityEngine;
 using BT;
 using UnityEngine.AI;
 
-public class WaspPatrol : BT_Node
+public class BeePatrol : BT_Node
 {
     private Transform _transform;
     private Transform[] _flowers;
     private NavMeshAgent _agent;
-    private BT_Wasp _btWasp;
+    private BT_DefendBee _DefendBee;
   
     private int _currentWaypointIndex = 0;
 
@@ -15,12 +15,12 @@ public class WaspPatrol : BT_Node
     private float _waitCounter = 0f;
     private bool _waiting = false;
 
-    public WaspPatrol(Transform transform, Transform[] flowers, NavMeshAgent agent, BT_Wasp btWasp)
+    public BeePatrol(Transform transform, Transform[] flowers, NavMeshAgent agent, BT_DefendBee btBee)
     {
         _transform = transform;
         _flowers = flowers;
         _agent = agent;
-        _btWasp = btWasp;
+        _DefendBee = btBee;
     }
 
     public override NodeState Evaluate()

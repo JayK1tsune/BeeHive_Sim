@@ -8,7 +8,7 @@ namespace BT
     {
 
         private BT_Node _root = null;
-
+        //
         protected void Start()
         {
             _root = SetupTree();
@@ -20,8 +20,8 @@ namespace BT
                 _root.Evaluate();
                 Debug.Log(_root.Evaluate());
         }
-
-        protected abstract BT_Node SetupTree();
+        
+        protected abstract BT_Node SetupTree(); // This is the only method that the child classes need to implement
 
     }
 

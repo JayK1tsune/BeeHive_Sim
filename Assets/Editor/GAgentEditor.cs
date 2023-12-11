@@ -14,6 +14,8 @@ public class GAgentVisualEditor : Editor
 
     }
 
+    // Created quick inspector for GAgentVisual so I can see the current action and goals
+    // This is not a good way to do this, but it works for now
     public override void OnInspectorGUI()
     {
         DrawDefaultInspector();
