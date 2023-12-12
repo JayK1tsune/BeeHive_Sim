@@ -5,6 +5,7 @@ using UnityEngine;
 public class QueenWorkerSpawner : GAgent
 {
     public GameObject beePrefab;
+    public Transform spawnPoint;
    
     protected override void Start()
     {
@@ -52,7 +53,7 @@ public class QueenWorkerSpawner : GAgent
     
     void SpawnBee(GameObject beePrefab)
     {
-        Instantiate(beePrefab, this.transform.position, Quaternion.identity);
+        Instantiate(beePrefab, spawnPoint.position, Quaternion.identity);
         //transform.parent = transform;
         //Invoke("SpawnBee", Random.Range(2, 10)); 
     }

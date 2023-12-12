@@ -11,6 +11,7 @@ public class WorkerDeath : GAction
     public override bool PostPerform()
     {
         GameObject.Destroy(this.gameObject,1);
+        GWorld.Instance.GetWorld().ModifyState("FlowersAvailable", 1);
         return true;
     }
 }

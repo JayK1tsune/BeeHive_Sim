@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6136352804969770611
+--- !u!1 &6589805190598936885
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,55 +8,53 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 9152414579980917681}
-  - component: {fileID: 3802332399661820854}
-  - component: {fileID: 2299672269875564577}
-  - component: {fileID: 4412667904760154356}
-  - component: {fileID: 6458731396828763621}
-  - component: {fileID: 8031162418429622}
-  - component: {fileID: 2548834248463455359}
-  - component: {fileID: 6391222597904756014}
-  - component: {fileID: 737348973765804717}
-  - component: {fileID: 8788999047878423478}
-  - component: {fileID: 9130794207029059019}
-  - component: {fileID: 104720448608537238}
-  m_Layer: 0
-  m_Name: HoneyBee
-  m_TagString: HoneyBee
+  - component: {fileID: 7859875325189031086}
+  - component: {fileID: 5112149277369801764}
+  - component: {fileID: 5085641523353505037}
+  - component: {fileID: 1213652056704546975}
+  - component: {fileID: 5773657051956385619}
+  - component: {fileID: 766719135693135926}
+  - component: {fileID: 880794818299418723}
+  - component: {fileID: 7889186760847270470}
+  - component: {fileID: 3083084930186603154}
+  - component: {fileID: 3601983481802183311}
+  m_Layer: 6
+  m_Name: Wasp
+  m_TagString: Wasp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &9152414579980917681
+--- !u!4 &7859875325189031086
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6136352804969770611}
+  m_GameObject: {fileID: 6589805190598936885}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.76604414, y: 1.2921602, z: -16.920015}
+  m_LocalPosition: {x: -39.41, y: 1.186, z: -42.83}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &3802332399661820854
+--- !u!33 &5112149277369801764
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6136352804969770611}
+  m_GameObject: {fileID: 6589805190598936885}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &2299672269875564577
+--- !u!23 &5085641523353505037
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6136352804969770611}
+  m_GameObject: {fileID: 6589805190598936885}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -70,7 +68,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 095fe6e78a62c884aa5611acdedf62d6, type: 2}
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -92,13 +90,13 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!54 &4412667904760154356
+--- !u!54 &1213652056704546975
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6136352804969770611}
+  m_GameObject: {fileID: 6589805190598936885}
   serializedVersion: 4
   m_Mass: 1
   m_Drag: 0
@@ -119,13 +117,13 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &6458731396828763621
+--- !u!136 &5773657051956385619
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6136352804969770611}
+  m_GameObject: {fileID: 6589805190598936885}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -138,24 +136,24 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 4.763242
-  m_Height: 9.526484
+  m_Radius: 0.5
+  m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!195 &8031162418429622
+--- !u!195 &766719135693135926
 NavMeshAgent:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6136352804969770611}
+  m_GameObject: {fileID: 6589805190598936885}
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 7
+  m_Speed: 6
   m_Acceleration: 8
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: 50
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
@@ -164,122 +162,80 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &2548834248463455359
+--- !u!114 &880794818299418723
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6136352804969770611}
+  m_GameObject: {fileID: 6589805190598936885}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7390ac1ea4d1a2d4da95ea0c3465b566, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thisAgent: {fileID: 6391222597904756014}
---- !u!114 &6391222597904756014
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6136352804969770611}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 623f5d8d1f41c70459c997855e92f750, type: 3}
+  m_Script: {fileID: 11500000, guid: 773a9e133b92fe944b7a4af986501cef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   actions: []
   currentAction: {fileID: 0}
-  beePrefab: {fileID: 3986289970904198669, guid: 8658c3d5b74850147917fc2156ec506a, type: 3}
---- !u!114 &737348973765804717
+--- !u!114 &7889186760847270470
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6136352804969770611}
+  m_GameObject: {fileID: 6589805190598936885}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52f023cd2e39f8f45adfad87e92e5dbb, type: 3}
+  m_Script: {fileID: 11500000, guid: b456dfe8848f5634d9b34133ea49686c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actionName: GetHoneyBee
+  actionName: Patrol
   cost: 1
   target: {fileID: 0}
   targetTag: 
-  duration: 1
-  preConditions:
-  - key: BeeWaiting
-    value: 0
-  - key: HivesAvailable
-    value: 0
+  duration: 0
+  preConditions: []
   afterEffects:
-  - key: CollectedBee
+  - key: IsPatroling
     value: 0
   agent: {fileID: 0}
   running: 0
---- !u!114 &8788999047878423478
+--- !u!114 &3083084930186603154
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6136352804969770611}
+  m_GameObject: {fileID: 6589805190598936885}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8105db1270daa142b4207a403e2952d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  actionName: TakeBeeToHive
-  cost: 1
-  target: {fileID: 0}
-  targetTag: 
-  duration: 3
-  preConditions:
-  - key: CollectedBee
-    value: 0
-  afterEffects:
-  - key: HarvestHoney
-    value: 0
-  agent: {fileID: 0}
-  running: 0
---- !u!114 &9130794207029059019
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6136352804969770611}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a53cebde1173c904cb3cc0a8a4f9bc64, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  actionName: Action
-  cost: 1
-  target: {fileID: 0}
-  targetTag: Queen
-  duration: 5
-  preConditions:
-  - key: QueenNeedsHoney
-    value: 0
-  afterEffects:
-  - key: FedQueen
-    value: 0
-  agent: {fileID: 0}
-  running: 0
---- !u!114 &104720448608537238
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6136352804969770611}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6249e5f1680f6ba4dab6fa049dab341f, type: 3}
+  m_Script: {fileID: 11500000, guid: 66f120942d3ed4a449db1f0a34a04b27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   actions: []
   currentAction: {fileID: 0}
+  viewRadius: 10.34
+  viewAngle: 52
+  wasp: []
+  bee: []
+  currentWasp: {fileID: 0}
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 64
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 128
+  canSeeBee: 0
+  canSeeWasp: 0
+--- !u!114 &3601983481802183311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6589805190598936885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ef06051769b7564e9fc318d643e3439, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _healthpoints: 20

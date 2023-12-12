@@ -1,30 +1,32 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class FieldOfView : GAgent
 {
     public float viewRadius;
     [Range(0, 360)]
     public float viewAngle;
-    public GameObject[] wasp;
-    public GameObject[] bee;
-    public GameObject currentWasp;
     public LayerMask targetMask;
     public LayerMask obstacleMask;
     public bool canSeeBee;
     public bool canSeeWasp;
+    public GameObject currentWasp;
+    public GameObject currentBee;
+    public GameObject[] wasp;
+    public GameObject[] bee;
 
-    // Start is called before the first frame update
+    private NavMeshAgent agent;
+
     protected override void Start()
     {
         base.Start();
         StartCoroutine("FOVRoutine");
+        agent = GetComponent<NavMeshAgent>();
     }
 
     private IEnumerator FOVRoutine()
     {
-
         WaitForSeconds wait = new WaitForSeconds(0.2f);
 
         while (true)
@@ -33,37 +35,48 @@ public class FieldOfView : GAgent
             FieldOfViewCheck();
         }
     }
-    private void FieldOfViewCheck()
+
+    public void FieldOfViewCheck()
     {
         Collider[] rangeChecks = Physics.OverlapSphere(transform.position, viewRadius, targetMask);
+
         if (rangeChecks.Length != 0)
         {
             Transform target = rangeChecks[0].transform;
             Vector3 dirToTarget = (target.position - transform.position).normalized;
+
             if (Vector3.Angle(transform.forward, dirToTarget) < viewAngle / 2)
             {
                 float distToTarget = Vector3.Distance(transform.position, target.position);
+
                 if (!Physics.Raycast(transform.position, dirToTarget, distToTarget, obstacleMask))
                 {
-                    canSeeBee = true;
-                    canSeeWasp = true;
-                    Debug.Log("Wasp can see bee");
+                    if (target.CompareTag("Wasp"))
+                    {
+                        canSeeWasp = true;
+                        canSeeBee = false;
+                        agent.SetDestination(target.position);
+                    }
+                    else if (target.CompareTag("DefenceBee"))
+                    {
+                        canSeeBee = true;
+                        canSeeWasp = false;
+                        agent.SetDestination(target.position);
+                    }
                 }
                 else
                 {
                     canSeeWasp = false;
                     canSeeBee = false;
-                    Debug.Log("Wasp can't see bee");
                 }
             }
-            else 
+            else
             {
                 canSeeWasp = false;
                 canSeeBee = false;
-                Debug.Log("Wasp can't see bee");
             }
         }
-    }  
+    } 
     void Update()
     {
         wasp = GameObject.FindGameObjectsWithTag("DefenceBee");

@@ -9,15 +9,16 @@ public class CheckHostileInRange : BT_Node
     private Transform _transform;
     private NavMeshAgent _agent;
     private BT_DefendBee _DefendBee;
+    private FieldOfView _fieldOfView; 
 
     public static int _enemyLayer = 1 << 6;
 
-    public CheckHostileInRange(Transform transform, NavMeshAgent agent, BT_DefendBee btBee)
+    public CheckHostileInRange(Transform transform, NavMeshAgent agent, BT_DefendBee btBee, FieldOfView fov)
     {
         _transform = transform;
         _agent = agent;
-        _DefendBee = btBee;    
-
+        _DefendBee = btBee;
+        _fieldOfView = _transform.GetComponent<FieldOfView>(); // Assign FieldOfView component from the transform
     }
 
     public override NodeState Evaluate()
@@ -25,23 +26,22 @@ public class CheckHostileInRange : BT_Node
         object t = GetData("target");
         if (t == null)
         {
-            Collider[] colliders = Physics.OverlapSphere(_transform.position, BT_DefendBee.FOVRange, _enemyLayer);
-            Debug.Log(colliders.Length);
+            // Use FieldOfView methods to check for enemies
+            _fieldOfView.FieldOfViewCheck();
 
-            if (colliders.Length > 0){
-
-                parent.SetData("target", colliders[0].transform);
-                if (colliders[0].transform.parent == null)
+            if (_fieldOfView.canSeeWasp == true)
+            {
+                Debug.Log("HELLO FUTURE ME, THIS IS THE PROBLEM");
+                // Perform actions when an enemy is detected
+                parent.parent.SetData("target", _fieldOfView.currentWasp.transform);
+                if (_fieldOfView.currentWasp.transform.parent.parent == null)
                 {
-                    Debug.Log(colliders[0].transform.parent.parent);
+                    Debug.Log("HELLO FUTURE ME, THIS IS THE PROBLEM");
                     nodeState = NodeState.FAILURE;
                     return nodeState;
                 }
-                Debug.Log(transform.position);
                 nodeState = NodeState.SUCCESS;
-                Debug.Log("Found target");
                 return nodeState;
-                
             }
 
             nodeState = NodeState.FAILURE;
@@ -50,6 +50,6 @@ public class CheckHostileInRange : BT_Node
         nodeState = NodeState.SUCCESS;
         return nodeState;
     }
-
 }
+
 

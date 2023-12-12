@@ -42,7 +42,7 @@ public abstract class GAction : MonoBehaviour
             }
         }   
         inventory = this.GetComponent<GAgent>().inventory;
-        Debug.Log("Inventory: " + inventory);
+        //Debug.Log("Inventory: " + inventory);
         beliefs = this.GetComponent<GAgent>().beliefs;
     }
     public bool IsAchievable() {

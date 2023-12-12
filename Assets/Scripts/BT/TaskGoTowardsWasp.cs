@@ -8,12 +8,13 @@ public class TaskGoTowardsWasp : BT_Node
 {
     private Transform _transform;
     private NavMeshAgent _agent;
-    private BT_DefendBee _DefenceBee;
+    private BT_DefendBee _DefenceBee;  
+    FieldOfView _fov;
 
 
     public TaskGoTowardsWasp(Transform transform, NavMeshAgent agent, BT_DefendBee btBee)
     {
-        _transform = transform;
+        _transform = _fov.transform;
         _agent = agent;
         _DefenceBee = btBee;
 
