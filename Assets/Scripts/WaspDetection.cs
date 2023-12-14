@@ -1,26 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using BT;
+
+using UnityEngine.AI;
 
 
 public class WaspDetection : GAgent
 {
     GameObject[] wasps;
-  
+    NavMeshAgent agent;
     private float waspcount;
     private GameObject[] BT_DefendBee;
-    BT_DefendBee bt_DefendBee;
+  
 
     protected override void Start()
     {
+        agent = GetComponent<NavMeshAgent>();
         base.Start();
         InvokeRepeating("FindAllWasps", 0f, 30f);
-        for (int i = 0; i < BT_DefendBee.Length; i++)
-        {
-            BT_DefendBee[i] = GameObject.FindGameObjectWithTag("DefenceBee");
-        }
-        bt_DefendBee = BT_DefendBee[0].GetComponent<BT_DefendBee>();
+
     }
     void Update()
     {
@@ -37,7 +35,7 @@ public class WaspDetection : GAgent
         wasps = GameObject.FindGameObjectsWithTag("Wasp");
     }
 
-    bool isWaspNearby = false;
+    public bool isWaspNearby = false;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -45,7 +43,7 @@ public class WaspDetection : GAgent
         {
             isWaspNearby = true;
             //bt_DefendBee.HoneyBeeUnderAttack = true;
-
+            agent.SetDestination(other.transform.position);
             Debug.Log("Wasp entered the area!");
         }
     }
@@ -58,6 +56,23 @@ public class WaspDetection : GAgent
             Debug.Log("Wasp is not nearby");   
         }
     }
+
+public Transform GetNearestWaspTransform()
+    {
+        Transform nearestWasp = null;
+        float minDistance = Mathf.Infinity;
+        foreach (GameObject wasp in wasps)
+        {
+            float distance = Vector3.Distance(transform.position, wasp.transform.position);
+            if (distance < minDistance)
+            {
+                minDistance = distance;
+                nearestWasp = wasp.transform;
+            }
+        }
+        return nearestWasp;
+    }
+
     
 
 }

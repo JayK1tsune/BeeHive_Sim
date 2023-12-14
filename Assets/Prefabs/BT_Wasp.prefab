@@ -12,11 +12,9 @@ GameObject:
   - component: {fileID: 4229960800044217118}
   - component: {fileID: 8847428085650133681}
   - component: {fileID: 8709156218334368233}
-  - component: {fileID: 5098735726247949139}
-  - component: {fileID: 7443800049385672365}
-  - component: {fileID: 7959069460123610551}
-  - component: {fileID: 4832710091212692624}
-  m_Layer: 6
+  - component: {fileID: 8235621382020361459}
+  - component: {fileID: 7298645541506745850}
+  m_Layer: 0
   m_Name: BT_Wasp
   m_TagString: Wasp
   m_Icon: {fileID: 0}
@@ -110,7 +108,7 @@ NavMeshAgent:
   m_BaseOffset: 0.88
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &5098735726247949139
+--- !u!114 &8235621382020361459
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,26 +117,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 8929543523599223262}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66f120942d3ed4a449db1f0a34a04b27, type: 3}
+  m_Script: {fileID: 11500000, guid: 492fd5166690e544dbea3ded69b1a20a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actions: []
-  currentAction: {fileID: 0}
-  viewRadius: 10.34
-  viewAngle: 52
-  wasp: []
-  bee:
-  - {fileID: 0}
-  currentWasp: {fileID: 0}
-  targetMask:
-    serializedVersion: 2
-    m_Bits: 64
-  obstacleMask:
-    serializedVersion: 2
-    m_Bits: 128
-  canSeeBee: 0
-  canSeeWasp: 0
---- !u!114 &7443800049385672365
+  FeedbackDisplay: {fileID: 0}
+  _VisionConeAngle: 60
+  _VisionConeRange: 28.51
+  _VisionConeColour: {r: 1, g: 0, b: 0, a: 0.25}
+  _HearingRange: 17.8
+  _HearingRangeColour: {r: 1, g: 1, b: 0, a: 0.25}
+  _ProximityDetectionRange: 3
+  _ProximityRangeColour: {r: 1, g: 1, b: 1, a: 0.25}
+--- !u!114 &7298645541506745850
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -147,61 +137,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 8929543523599223262}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ef06051769b7564e9fc318d643e3439, type: 3}
+  m_Script: {fileID: 11500000, guid: 43b8c90a6fb4f564b96d3e8380513174, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _healthpoints: 20
---- !u!114 &7959069460123610551
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8929543523599223262}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26ae76b3a3916974482447b85d35ffe3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  flowers:
+  waypoints:
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
---- !u!65 &4832710091212692624
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8929543523599223262}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 2, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
