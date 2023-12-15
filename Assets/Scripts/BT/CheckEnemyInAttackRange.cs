@@ -25,7 +25,7 @@ public class CheckEnemyInAttackRange : BTNode
         }
 
         Transform target = (Transform)t;
-        if (Vector3.Distance(_transform.position, target.position) <= GuardBT.attackRange)
+        if (Vector3.Distance(_transform.position, target.position) <= WaspBT.attackRange)
         {
             //_animator.SetBool("Attacking", true);
             //_animator.SetBool("Walking", false);

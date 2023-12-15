@@ -23,7 +23,7 @@ public class CheckEnemyInFOVRange : BTNode
         if (t == null)
         {
             Collider[] colliders = Physics.OverlapSphere(
-                _transform.position, GuardBT.fovRange, _enemyLayerMask);
+                _transform.position, WaspBT.fovRange, _enemyLayerMask);
 
             if (colliders.Length > 0)
             {

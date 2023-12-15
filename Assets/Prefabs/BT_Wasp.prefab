@@ -11,9 +11,11 @@ GameObject:
   - component: {fileID: 673540012475737713}
   - component: {fileID: 4229960800044217118}
   - component: {fileID: 8847428085650133681}
+  - component: {fileID: 664015083868923489}
   - component: {fileID: 8709156218334368233}
   - component: {fileID: 8235621382020361459}
-  - component: {fileID: 7298645541506745850}
+  - component: {fileID: 7522311018556133710}
+  - component: {fileID: 503355369989589146}
   m_Layer: 0
   m_Name: BT_Wasp
   m_TagString: Wasp
@@ -86,6 +88,29 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!136 &664015083868923489
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8929543523599223262}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!195 &8709156218334368233
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -93,7 +118,7 @@ NavMeshAgent:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8929543523599223262}
-  m_Enabled: 1
+  m_Enabled: 0
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 10
@@ -128,7 +153,7 @@ MonoBehaviour:
   _HearingRangeColour: {r: 1, g: 1, b: 0, a: 0.25}
   _ProximityDetectionRange: 3
   _ProximityRangeColour: {r: 1, g: 1, b: 1, a: 0.25}
---- !u!114 &7298645541506745850
+--- !u!114 &7522311018556133710
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -137,9 +162,31 @@ MonoBehaviour:
   m_GameObject: {fileID: 8929543523599223262}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43b8c90a6fb4f564b96d3e8380513174, type: 3}
+  m_Script: {fileID: 11500000, guid: 10222097ee8fa034a9dd2144121ad97d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &503355369989589146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8929543523599223262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6af5d78dab7ea7a4fbce4d1d1b393223, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   waypoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}

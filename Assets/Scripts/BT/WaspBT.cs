@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using BehaviorTree;
 using UnityEngine.AI;
 
-public class GuardBT : BTTree
+public class WaspBT : BTTree
 {
     public UnityEngine.Transform[] waypoints;
 
