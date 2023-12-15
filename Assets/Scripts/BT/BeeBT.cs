@@ -1,13 +1,13 @@
 using System.Collections.Generic;
 using BehaviorTree;
+
 using UnityEngine.AI;
 
-public class GuardBT : BTTree
+public class BeeBT : BTTree
 {
     public UnityEngine.Transform[] waypoints;
 
-    
-    public static float speed = 5f;
+    public static float speed = 2f;
     public static float fovRange = 6f;
     public static float attackRange = 1f;
     public static NavMeshAgent agent;
@@ -23,19 +23,20 @@ public class GuardBT : BTTree
         //Create the tree structure here most important actions are at the top of the "Tree"
         BTNode root = new Selector(new List<BTNode>
         {
-            new Sequence(new List<BTNode>
-            {
-                new CheckEnemyInAttackRange(transform),
-                new TaskAttack(transform),
-            }),
-            new Sequence(new List<BTNode>
-            {
-                new CheckEnemyInFOVRange(transform),
-                new TaskGoToTarget(transform),
-            }),
+            // new Sequence(new List<BTNode>
+            // {
+            //     new CheckEnemyInAttackRange(transform),
+            //     new TaskAttack(transform),
+            // }),
+            // new Sequence(new List<BTNode>
+            // {
+            //     new CheckEnemyInFOVRange(transform),
+            //     new TaskGoToTarget(transform),
+            // }),
             new TaskPatrol(transform, waypoints),
         });
 
         return root;
     }
+
 }

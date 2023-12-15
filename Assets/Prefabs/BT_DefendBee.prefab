@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7632944886842534803}
   - component: {fileID: 4311846860324066157}
   - component: {fileID: 945760813826780278}
+  - component: {fileID: 2355252425555447109}
   m_Layer: 6
   m_Name: BT_DefendBee
   m_TagString: DefenceBee
@@ -94,7 +95,7 @@ NavMeshAgent:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8186284654473469242}
-  m_Enabled: 1
+  m_Enabled: 0
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 10
@@ -137,7 +138,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -155,3 +156,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10222097ee8fa034a9dd2144121ad97d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2355252425555447109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8186284654473469242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f97ace4e97c29d479bd8b5cd97b961e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

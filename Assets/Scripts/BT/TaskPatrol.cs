@@ -48,7 +48,7 @@ public class TaskPatrol : BTNode
             }
             else
             {
-                _transform.position = Vector3.MoveTowards(_transform.position, wp.position, GuardBT.speed * Time.deltaTime);
+                _transform.position = Vector3.MoveTowards(_transform.position, wp.position, BTManager.speed * Time.deltaTime);
                 _transform.LookAt(wp.position);
             }
         }

@@ -20,7 +20,7 @@ public class TaskGoToTarget : BTNode
         if (Vector3.Distance(_transform.position, target.position) > 0.1f)
         {
             _transform.position = Vector3.MoveTowards(
-                _transform.position, target.position, GuardBT.speed * Time.deltaTime);
+                _transform.position, target.position, BTManager.speed * Time.deltaTime);
             _transform.LookAt(target.position);
         }
 
